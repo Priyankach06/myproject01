@@ -1,0 +1,27 @@
+{%extends "app1/base.html"%}
+
+{%block title%}
+
+<title>Contact</title>
+{%endblock%}
+{%block body_block%}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h2> Contact Us</h2>
+	<form method="POST">
+		{%csrf_token%}
+		{{form.as_p}}
+		<button>Submit</button>
+	</form>
+</center>
+
+</body>
+</html>
+{%endblock%}

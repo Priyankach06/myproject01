@@ -1,0 +1,27 @@
+{%extends "app1/base.html"%}
+
+{%load static%}
+{%block body_block%}
+<link rel="stylesheet" href="{%static "css/style.css"%}">
+
+	<center>
+	<h2>REGISTERED USERS</h2>
+	<table border=3px;>
+		<thead>
+			<th>Name</th>
+			<th>Phone</th>
+			<th>Email</th>
+			<th>Message</th>
+		</thead>
+		{%for i in c%}
+		<tr>
+			<td>{{i.name | title}}</td>
+			<td>{{i.phone}}</td>
+		    <td>{{i.email}}</td>
+		    <td>{{i.message | title}}</td>
+		 </tr>
+		{%endfor%}
+	</table>
+	</center>
+
+{%endblock%}
